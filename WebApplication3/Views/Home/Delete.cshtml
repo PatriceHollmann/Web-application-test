@@ -1,0 +1,42 @@
+﻿@model WebApplication3.Models.Person
+
+
+<h3>Are you sure you want to delete this?</h3>
+
+    <h4>Сотрудник</h4>
+    <hr />
+    <tr>
+        <td><p>Имя</p></td>
+
+
+
+        <td>
+            <p>
+                @Html.DisplayFor(model => model.Name)
+            </p>
+        </td>
+
+
+
+        <td>
+            <p>
+                Фамилия
+            </p>
+        </td>
+
+
+
+        <td><p> @Html.DisplayFor(model => model.Surname)</p></td>
+
+
+    </tr>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> 
+        </div>
+    }
+

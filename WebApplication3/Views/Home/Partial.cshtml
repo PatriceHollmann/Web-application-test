@@ -1,0 +1,21 @@
+﻿
+<body>
+    <div>
+        <h3>Список сотрудников</h3>
+        <table>
+            <tr>
+                <td><p>Имя</p></td>
+                <td><p>Фамилия</p></td>
+                <td></td>
+            </tr>
+            @foreach (var a in ViewBag.Person)
+            {
+                <tr>
+                    <td><p>@a.Name</p></td>
+                    <td><p>@a.Surname</p></td>
+                    <td><p><a href="/Home/Delete/@a.Id">Удалить</a></p></td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>

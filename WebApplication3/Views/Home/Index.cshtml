@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Организация ООО";
+}
+    <body>
+        <div>
+            <h3>
+                Штатное расписание
+            </h3>
+            <table>
+                <tr>
+                    <td><p>Департамент</p></td>
+                    <td><p>Должность</p></td>
+                    <td>Зарплата</td>
+                    <td>Имя</td>
+                    <td>Фамилия</td>
+                    <td></td>
+                </tr>
+                @foreach (var a in ViewBag.Person)
+                {
+            <tr>
+                <td><p>@a.Corporation.Department</p></td>
+                <td><p>@a.Corporation.Position</p></td>
+                <td><p>@a.Corporation.Salary</p></td>
+                <td><p>@a.Name</p></td>
+                <td><p>@a.Surname</p></td>
+                <td><p><a href="/Home/EditPerson/@a.Id">Просмотр сотрудника</a></p></td>
+            </tr>
+                }
+            </table>
+        </div>
+        @Html.Partial("Partial")
+    </body>
+@section Footer{<p>&copy; @DateTime.Now.Year - мое приложение ASP.NET! я мега-крут!</p>}

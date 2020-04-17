@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "AddPerson";
+}
+<div>
+    <h3>Сведения о сотруднике </h3>
+    <form method="post">
+        <input type="hidden" value="@ViewBag.PersonId" name="PersonId" />
+
+        <table>
+            <tr>
+                <td><p>Имя сотрудника</p></td>
+                <td><input type="text" name="Name" /></td>
+            </tr>
+            <tr>
+                <td><p>Фамилия сотрудника</p></td>
+                <td><input type="text" name="Surname" /></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Добавить" /></td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+</div>
